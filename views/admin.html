@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Single sign-on · Meridian Admin</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <header id="topbar" class="topbar"></header>
+  <main class="page">
+    <div class="card-head">
+      <div>
+        <h1>Single sign-on</h1>
+        <p class="muted">Connect your identity provider so your team signs in with their company account.</p>
+      </div>
+      <a id="test-sso" class="btn btn-primary" href="#">Test SSO</a>
+    </div>
+
+    <section class="card" id="sp-card"></section>
+    <section class="card" id="idp-card"></section>
+    <section class="card" id="domains-card"></section>
+    <section class="card" id="attrs-card"></section>
+    <section class="card" id="events-card"></section>
+  </main>
+  <script src="/static/js/common.js"></script>
+  <script src="/static/js/admin.js"></script>
+</body>
+</html>

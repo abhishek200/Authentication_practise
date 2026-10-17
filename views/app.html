@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home · Meridian</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <header id="topbar" class="topbar"></header>
+  <main class="page">
+    <h1 id="welcome">Welcome</h1>
+    <p id="subtitle" class="muted"></p>
+
+    <div class="grid cols-3">
+      <div class="card stat"><div class="num">24</div><div class="label">Active projects</div></div>
+      <div class="card stat"><div class="num">112</div><div class="label">Open tasks</div></div>
+      <div class="card stat"><div class="num">98%</div><div class="label">On-time delivery</div></div>
+    </div>
+
+    <div class="grid cols-2 app-columns">
+      <div class="card">
+        <h2>Recent projects</h2>
+        <table>
+          <thead><tr><th>Project</th><th>Owner</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Q4 platform migration</td><td>Platform team</td><td><span class="badge ok">On track</span></td></tr>
+            <tr><td>Vendor risk review</td><td>Security</td><td><span class="badge warn">At risk</span></td></tr>
+            <tr><td>Customer onboarding revamp</td><td>Success</td><td><span class="badge ok">On track</span></td></tr>
+            <tr><td>Data retention policy</td><td>Legal</td><td><span class="badge muted">Planned</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h2>How you signed in</h2><span class="badge ok">SAML 2.0</span></div>
+        <p class="hint">What your identity provider asserted about you. Meridian never saw your password.</p>
+        <div id="session-details"></div>
+      </div>
+    </div>
+  </main>
+  <script src="/static/js/common.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

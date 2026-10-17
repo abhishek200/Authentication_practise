@@ -1,0 +1,46 @@
+{
+  "_readme": "One entry per customer (tenant). In Phase 2 this moves to a database + admin UI. Certs are PEM files under certs/. Leave idp.entityId/ssoUrl empty until the customer's IdP is configured: the tenant then shows 'Not configured' and SP metadata is still downloadable.",
+  "tenants": [
+    {
+      "slug": "ivalue",
+      "name": "iValue Group",
+      "domains": [{ "domain": "ivalue.co.in", "verified": true }],
+      "idp": {
+        "label": "Okta",
+        "entityId": "http://www.okta.com/exk18sahrqliiQOBL698",
+        "ssoUrl": "https://trial-7529110.okta.com/app/trial-7529110_meridian_1/exk18sahrqliiQOBL698/sso/saml",
+        "certFiles": ["certs/okta.cert"],
+        "requireSignedResponse": false
+      },
+      "attributeMap": {
+        "email": "email",
+        "firstName": "firstName",
+        "lastName": "lastName",
+        "groups": "groups"
+      },
+      "adminGroup": "Meridian Admins"
+    },
+    {
+      "slug": "example",
+      "name": "Example Industries",
+      "domains": [
+        { "domain": "example.com", "verified": true },
+        { "domain": "example.com", "verified": false }
+      ],
+      "idp": {
+        "label": "MockSAML",
+        "entityId": "https://saml.example.com/entityid",
+        "ssoUrl": "https://mocksaml.com/api/saml/sso",
+        "certFiles": ["certs/globex-mocksaml.pem"],
+        "requireSignedResponse": false
+      },
+      "attributeMap": {
+        "email": "email",
+        "firstName": "firstName",
+        "lastName": "lastName",
+        "groups": "groups"
+      },
+      "adminGroup": "Meridian Admins"
+    }
+  ]
+}
